@@ -1,0 +1,180 @@
+# AutomationExercise Test Plan
+
+## 1. Overview
+AutomationExercise is a comprehensive practice website for automation engineers at all levels. It is a full-featured
+e-commerce platform that provides realistic testing scenarios to help QA professionals develop and refine their
+automation testing skills. The platform covers various functional areas including user management, product browsing,
+cart operations, and order processing.
+
+Additionally, AutomationExercise provides API test documentation and publicly available endpoints suitable for
+functional API validation and for supporting UI automation.
+
+## 2. Testing Objectives
+- Validate user registration and authentication functionality
+- Ensure proper shopping cart operations and checkout process
+- Verify product browsing, search, and filtering capabilities
+- Test payment and order placement functionality
+- Validate data persistence and user account management
+- Test responsive design and UI interactions
+- Ensure proper error handling and validation messages
+
+## 3. Testing Scope
+
+### In Scope (UI):
+- User Registration and Login (positive and negative scenarios)
+- Product Browsing and Search
+- Shopping Cart Management
+- Checkout and Order Placement
+- User Account Management
+- Product Reviews
+- Contact Us Form
+- Payment Processing
+- Invoice Download
+- Subscription Feature
+- Category and Brand Filtering
+- Scroll Functionality
+
+### In Scope (API):
+
+- Authentication verification endpoints (e.g., login verification)
+- Account management endpoints (e.g., create account, delete account if supported)
+- Product catalog endpoints (e.g., list products, search products, category/brand filtering if supported)
+- Form submission endpoints where documented (e.g., contact form)
+- Negative API scenarios (invalid payload, missing required fields, invalid credentials)
+- Contract checks (status codes, response schema/fields, error messages)
+
+### Out of Scope:
+- Mobile application testing
+- Performance and Load testing
+- Security penetration testing
+- Third-party payment gateway integration details
+- Deep backend validation not exposed by the public API
+
+## 4. Test Strategy & Approach
+
+### Testing Levels:
+1. **Unit Testing** - Individual feature validation
+2. **Integration Testing** - Feature interaction validation
+3. **System Testing** - End-to-end workflow validation
+4. **User Acceptance Testing** - Business requirement validation
+5. **API Testing – endpoint-level validation (functional + negative + contract checks)
+
+### Testing Types:
+- Functional Testing
+- Regression Testing
+- Smoke Testing
+- Sanity Testing
+- Boundary Value Testing
+- Positive and Negative Testing
+
+### Tools & Technologies:
+- **Automation Framework:** Playwright (Python)
+- **Programming Language:** Python
+- **Test Runner:** pytest (with pytest-playwright)
+- **Reporting:** HTML Reports, Allure
+- **Version Control:** Git
+
+## 5. Test Environment
+
+### Browser Coverage:
+- Google Chrome (Latest)
+- Mozilla Firefox (Latest)
+- Safari (WebKit)
+
+### Test Data:
+- Valid user credentials
+- Invalid/expired credentials
+- Product catalog with multiple categories
+- Test payment details (sandbox/test mode)
+
+### Environment URL:
+- Base URL: https://automationexercise.com
+- API Base Path: /api/ (per AutomationExercise API documentation)
+- Test Mode: Direct production-like testing
+
+## 6. Testing Schedule
+
+| Phase                 | Duration | Start Date | End Date |
+|-----------------------|----------|-----------|----------|
+| Test Planning         | 1 day  | Jan 27, 2026 | Jan 27, 2026|
+| Test Case Design      | 2 days | Jan 28, 2026| Jan 29, 2026 |
+| Test Automation Setup | 2 days | Jan 30, 2026| Jan 31, 2026 |
+| Test Execution        | 3 days | Feb 1, 2026 | Feb 3, 2026  |
+| Bug Reporting & Fixes | 2 days | Feb 4, 2026 | Feb 5, 2026  |
+| Final Verification    | 1 day  | Feb 6, 2026 | Feb 6, 2026  |
+| **Total Duration**    | **11 days** | | |
+
+## 7. Test Resources
+
+### Team Members:
+- **Test Automation Engineer:** 1
+
+### Required Infrastructure:
+- Test Execution Machine
+- Git Repository
+- CI/CD Pipeline (GitHub Actions)
+- Test Reporting Dashboard
+
+## 8. Entry Criteria
+- Test Plan document is approved
+- Test cases are documented and reviewed
+- Test environment is accessible
+- Test data is prepared and available
+- UI + API automation framework is set up
+- All team members are trained
+
+## 9. Exit Criteria
+- All planned test cases are executed
+- Test execution report is generated
+- Critical and high-priority bugs are resolved
+- Test coverage is ≥ 90%
+- Test Automation Engineer
+- Test artifacts are archived
+
+## 10. Test Deliverables
+1. Test Plan Document
+2. Test Cases Specification
+3. Test Automation Scripts
+4. Test Execution Report
+5. Defect Report
+6. Test Coverage Report
+7. Lessons Learned Document
+8. API Test Cases Specification
+
+## 11. Risk Analysis
+
+### Identified Risks:
+
+| Risk                           | Probability | Impact |               Mitigation                         |
+|--------------------------------|-------------|--------|--------------------------------------------------|
+| Test environment downtime      | Medium      | High   | Have backup environment; Regular health checks   |
+| Test data corruption           | Low         | High   | Version control for test data; Regular backups   |
+| Framework compatibility issues | Medium      | Medium | Regular framework updates; Cross-browser testing |
+| Resource unavailability        | Low         | Medium | Cross-training team members; Documentation       |
+| Third-party API failures       | Medium      | Medium | Use mock data; Have fallback scenarios           |
+
+## 12. Assumptions & Dependencies
+- Application is accessible and stable
+- Payment gateway is in test/sandbox mode
+- Public API endpoints remain available as documented
+- Test data will be available throughout testing period
+- Required user access and credentials will be provided
+- No major application changes during test execution
+- Internet connectivity is stable
+
+## 13. Sign-off & Approvals
+
+|          Role          | Name               | Signature | Date |
+|------------------------|--------------------|-----------|------|
+Test Automation Engineer   Yuliya Charniyenka
+
+---
+
+**Document Version:** 1.0
+**Last Updated:** January 26, 2026
+**Next Review Date:** February 13, 2026
+
+---
+
+## Test Cases Reference
+For detailed test cases, please refer to: 'tests' folder in the repository.
